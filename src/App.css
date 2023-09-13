@@ -13,3 +13,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.App {
+  /* Noto Sans KR 폰트 사용 */
+  font-family: "Noto Sans KR", Poppins, sans-serif;
+
+  /* 이하 코드는 그대로 유지 */
+  font-feature-settings: "clig" off, "liga" off;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans KR"; /* 폰트 패밀리 이름을 따옴표로 감싸줍니다. */
+  src: url(../public/fonts/NotoSansKR-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../public/fonts/Poppins-Regular.ttf);
+}

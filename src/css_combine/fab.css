@@ -1,0 +1,11 @@
+/*fAB*/
+.kakaotalk {
+  position: fixed; /* 화면에 고정 */
+  bottom: 44px; /* 아래 여백 */
+  right: 112px; /* 오른쪽 여백 */
+  cursor: pointer;
+  height: 122px; /* figma는 74. 기본값은 122 해보면 74는 너무 작다*/
+  box-shadow: rgba(253, 243, 243, 0.35);
+  z-index: 1000;
+}
+/*fAB*/

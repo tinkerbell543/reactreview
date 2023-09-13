@@ -1,0 +1,58 @@
+.faq-section {
+  margin: 16px 0 0 0px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 1216px;
+  display: flex;
+  border-radius: 40px;
+  border: 1px solid #cdcdcd;
+  background: #fff;
+  padding: 32px 44px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.faq-section .question {
+  cursor: pointer; /* 추가: 커서 모양 변경 */
+  color: #252525;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Noto Sans KR;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+/* 답변 표시 스타일 */
+.faq-section.expanded .answer {
+  margin-top: 10px;
+  display: block; /* 변경: 확장 시에 display를 block으로 변경 */
+}
+.answer {
+  color: #252525;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Noto Sans KR;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.question-prefix {
+  color: #21d67f;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Noto Sans KR;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin-right: 20px;
+}
