@@ -1,10 +1,12 @@
 import "./App.css";
 import Home from "./pages/Home";
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import DesktopInform from "./pages/DesktopInform"; // DesktopInform 컴포넌트의 경로를 맞게 설정
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import DesktopInform from "./pages/DesktopInform";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
     <div className="App">
       <Routes>

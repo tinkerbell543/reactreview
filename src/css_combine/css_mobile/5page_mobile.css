@@ -1,4 +1,4 @@
-@media (min-width: 681px) {
+@media (max-width: 680px) {
   .grey-supportbackground {
     width: 100%;
     height: 200px;

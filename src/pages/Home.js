@@ -1,13 +1,15 @@
 import React from "react";
 import FAQList from "./FAQList";
 import logo from "../img/logo_02_1.png";
-import main_human from "../img/messages1.png";
+import main_human1 from "../img/messages1.png";
+import main_human2 from "../img/mainimage(big).png";
 import review1protect from "../img/review1Protect.png";
 import review2protect from "../img/review2Protect.png";
-import { useEffect, useState } from "react";
+
 import kakaotalk from "../img/kakaotalk.png";
 import review1Score from "../img/4.6STAR.png";
 import review2Score from "../img/4.7STAR.png";
+import "../css_combine/css_mobile/home_mobile.css";
 import "../css_combine/home.css"; // 상대 경로 사용
 import { Link } from "react-router-dom";
 import reviewmaineffect from "../img/reviewmaineffect.png";
@@ -31,22 +33,6 @@ function Home() {
       "Market10",
     ],
   };
-  // (1)첫페이지 사람이미지 위치조절함수: 화면 가로길이 상태값 초기화
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  // 화면 크기가 변경될 때 화면 가로길이 업데이트
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // 이미지 위치를 동적으로 계산
-  const imageRight = windowWidth > 1440 ? "8%" : "-1%";
 
   // (2)서비스 안내 버튼 클릭 시 스크롤 처리 함수
   const scrollToinform = () => {
@@ -79,13 +65,13 @@ function Home() {
                 N개의 채널 속 리뷰들 <br />
                 <span className="lowest-price-text">최저가</span>로 모아드려요
               </p>
-              <p className="desktop-home-text2" style={{ marginTop: "28px" }}>
+              <p className="desktop-home-text2">
                 수많은 판매채널에 흩어져있는 리뷰들,
                 <br />
                 한곳에 모아 구매전환률을 높이세요!
               </p>
             </div>
-            <div className="home-buttoncontainer" style={{ marginTop: "39px" }}>
+            <div className="home-buttoncontainer">
               <button className="custom-button1">
                 <Link
                   to="/desktopinform"
@@ -100,15 +86,12 @@ function Home() {
             </div>
           </div>
         </div>
-        <img
-          src={main_human}
-          alt="이미지"
-          className="image"
-          style={{ right: imageRight }}
-        />
+        <img src={main_human1} alt="이미지" className="main_human1" />
+        <img src={main_human2} alt="이미지" className="main_human2" />
       </div>
+
       <div className="black-background">
-        <p className="page2maintext" style={{ marginTop: "56px" }}>
+        <p className="page2maintext">
           같은 상품도 더 잘팔리는 이유, <br />
           리뷰에 있습니다
         </p>
@@ -118,36 +101,24 @@ function Home() {
           className="kakaotalk"
           onClick={openKakaoTalkChat}
         />
-        <div className="reviews" style={{ marginTop: "32px" }}>
+        <div className="reviews">
           <div className="review1">
             <div style={{ display: "flex", justifyContent: "center" }}>
               <img
                 src={review1protect}
                 alt="review1protect"
-                width="100%"
-                height="169"
-                style={{ flexShrink: 0 }}
+                className="review1protect"
               />
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "25px 30.39px 0 33px",
-              }}
-            >
+            <div className="review1_line1">
               <span className="review1_name">액정보호방탄필름</span>
-              <img src={review1Score} alt="review1Score" />
+              <img
+                src={review1Score}
+                alt="review1Score"
+                className="review1score"
+              />
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "10px 22px 0 33px",
-              }}
-            >
+            <div className="review1_line2">
               <span className="review1_name">9900원</span>
               <div className="review1_amount">
                 <span></span>리뷰 4,546개
@@ -159,30 +130,18 @@ function Home() {
               <img
                 src={review2protect}
                 alt="review2protect"
-                width="100%"
-                height="169"
-                style={{ flexShrink: 0 }}
+                className="review2protect"
               />
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "25px 30.39px 0 33px",
-              }}
-            >
+            <div className="review2_line1">
               <span className="review2_name">액정보호방탄필름</span>
-              <img src={review2Score} alt="review2Score" />
+              <img
+                src={review2Score}
+                alt="review2Score"
+                className={review2Score}
+              />
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "10px 22px 0 33px",
-              }}
-            >
+            <div className="reivew2_line2">
               <span className="review2_name">9900원</span>
               <div className="review2_amount">
                 <span></span>리뷰 6개

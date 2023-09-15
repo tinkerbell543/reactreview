@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css_combine/desktop_inform.css";
 import logo from "../img/logo_02_1.png";
 import kite from "../img/letter_send_1.png";
@@ -6,10 +6,11 @@ import back_arrow from "../img/akar-icons_cross.png";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
+import { Helmet } from "react-helmet-async";
 
 const DesktopInform = () => {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState("");
+  const [name1, setName1] = useState("");
   const [nameError, setNameError] = useState("");
   const [phone1, setPhone1] = useState("");
   const [phone2, setPhone2] = useState("");
@@ -25,7 +26,7 @@ const DesktopInform = () => {
   const handleFormSubmit = async () => {
     setSubmitClicked(true); // "문의하기" 버튼 클릭 시 상태 변경
     if (
-      !inputValue ||
+      !name1 ||
       !phone1 ||
       !phone2 ||
       !phone3 ||
@@ -42,8 +43,9 @@ const DesktopInform = () => {
     try {
       const timestamp = serverTimestamp();
 
+      // 문의 정보를 contacts 컬렉션에 추가
       await addDoc(collection(db, "contacts"), {
-        name: inputValue,
+        name: name1,
         phone: `${phone1}-${phone2}-${phone3}`,
         email: `${email1}@${email2}`,
         detail,
@@ -54,7 +56,7 @@ const DesktopInform = () => {
 
       setShowPopup(true);
 
-      setInputValue("");
+      setName1("");
       setPhone1("");
       setPhone2("");
       setPhone3("");
@@ -70,10 +72,9 @@ const DesktopInform = () => {
       console.error("문의 저장 중 오류 발생:", error);
     }
   };
-
   const handleNameChange = (event) => {
     const newValue = event.target.value;
-    setInputValue(newValue);
+    setName1(newValue);
 
     // 패턴 검증
     const pattern = /^[가-힣a-zA-Zㄱ-ㅎㅏ-ㅣ\s]{1,15}$/;
@@ -125,8 +126,18 @@ const DesktopInform = () => {
 
     // 이메일 형식 검증
     const emailPattern = /^[a-zA-Z0-9!#$%^&*()_+{}[\]:;<>,.?~\\-]+$/;
-    if (!emailPattern.test(value)) {
-      setEmailError("이메일 형식에 맞지 않습니다.");
+
+    // email2 입력 필드의 값이 "."을 포함하는지 검사
+    const email2Valid = value.includes(".");
+
+    if (!emailPattern.test(value) || !email2Valid) {
+      setEmailError(
+        <div>
+          이메일 형식이 맞지 않습니다
+          <br />
+          예시:abc123@naver.com
+        </div>
+      );
     } else {
       setEmailError(""); // 올바른 형식의 입력인 경우 에러 메시지 초기화
     }
@@ -138,23 +149,16 @@ const DesktopInform = () => {
       setEmail2(value);
     }
   };
-
   const handleDetailChange = (event) => {
     const value = event.target.value;
     setDetail(value);
   };
 
-  useEffect(() => {
-    // 팝업이 떠 있는 동안 body의 스크롤을 막습니다.
-    if (showPopup) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [showPopup]);
-
   return (
     <div>
+      <Helmet>
+        <title>리뷰쏙-문의사항 접수</title>
+      </Helmet>
       <div className="inform_background">
         <div className="iconInform">
           <img src={logo} alt="이미지" />
@@ -188,7 +192,7 @@ const DesktopInform = () => {
                         nameError ? "nameError" : ""
                       }`}
                       id="name"
-                      value={inputValue}
+                      value={name1}
                       onChange={handleNameChange}
                       autoComplete="off" // 자동완성 비활성화
                     />
@@ -293,7 +297,7 @@ const DesktopInform = () => {
                 </span>
               </button>
               <div style={{ fontSize: "11px", color: "red", marginTop: "5px" }}>
-                {submitClicked && !inputValue && "이름: 필수 정보입니다."}
+                {submitClicked && !name1 && "이름: 필수 정보입니다."}
 
                 {submitClicked &&
                   (!phone1 || !phone2 || !phone3) &&
@@ -309,8 +313,12 @@ const DesktopInform = () => {
               {showPopup && (
                 <div className="popup-background">
                   <div className="popup">
-                    <p>reviewssok.shop 내용: </p>
-                    <p className="popup_main">문의사항이 등록됐습니다.</p>
+                    <p>
+                      문의 접수가 완료되었습니다!
+                      <br />
+                      확인 후 답변 드리겠습니다.
+                    </p>
+
                     <button onClick={() => setShowPopup(false)}>확인</button>
                   </div>
                 </div>

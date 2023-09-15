@@ -1,39 +1,41 @@
-/*appbar*/
-.green-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  background: rgba(60, 216, 141, 1);
-  width: 100%;
-  color: rgba(0, 0, 0, 1);
-  align-items: center;
-  z-index: 1000;
-  height: 80px;
-}
+@media (min-width: 681px) {
+  /*appbar*/
+  .green-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(60, 216, 141, 1);
+    width: 100%;
+    color: rgba(0, 0, 0, 1);
+    align-items: center;
+    z-index: 1000;
+    height: 80px;
+  }
 
-.nav-content {
-  display: flex; /* 새로운 플렉스박스를 생성합니다. */
-  align-items: center; /* 수직 방향(크로스 축) 가운데 정렬합니다. */
-  justify-content: space-between;
-  width: 1216px;
-}
+  .nav-content {
+    display: flex; /* 새로운 플렉스박스를 생성합니다. */
+    align-items: center; /* 수직 방향(크로스 축) 가운데 정렬합니다. */
+    justify-content: space-between;
+    width: 1216px;
+  }
 
-.logo {
-  width: 138px;
-  height: 43px;
-}
+  .logo {
+    width: 138px;
+    height: 43px;
+  }
 
-.nav-text {
-  color: #000; /* 텍스트 색상을 검정색으로 설정 */
-  text-align: right; /* 텍스트를 오른쪽 정렬로 설정 */
-  font-feature-settings: "clig" off, "liga" off; /* 글꼴 기능 설정을 변경합니다. */
-  font-family: "Noto Sans KR", sans-serif; /* 글꼴을 Noto Sans KR로 설정하고, 대체 글꼴을 설정합니다. */
-  font-size: 18px; /* 글꼴 크기를 18px로 설정 */
-  font-style: normal; /* 글꼴 스타일을 기본(normal)으로 설정 */
-  font-weight: 700; /* 글꼴 두께를 700 (굵게)로 설정 */
-  line-height: 20px; /* 행 높이를 20px로 설정 */
-  text-decoration: none; /* 밑줄 없음 설정 */
+  .nav-text {
+    color: #000; /* 텍스트 색상을 검정색으로 설정 */
+    text-align: right; /* 텍스트를 오른쪽 정렬로 설정 */
+    font-feature-settings: "clig" off, "liga" off; /* 글꼴 기능 설정을 변경합니다. */
+    font-family: "Noto Sans KR", sans-serif; /* 글꼴을 Noto Sans KR로 설정하고, 대체 글꼴을 설정합니다. */
+    font-size: 18px; /* 글꼴 크기를 18px로 설정 */
+    font-style: normal; /* 글꼴 스타일을 기본(normal)으로 설정 */
+    font-weight: 700; /* 글꼴 두께를 700 (굵게)로 설정 */
+    line-height: 20px; /* 행 높이를 20px로 설정 */
+    text-decoration: none; /* 밑줄 없음 설정 */
+  }
+  /*appbar*/
 }
-/*appbar*/

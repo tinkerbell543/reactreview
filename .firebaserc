@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "reviewssok2"
-  }
+    "default": "reviewssok3",
+    "reviewssok": "reviewssok3"
+  },
+  "targets": {},
+  "etags": {}
 }

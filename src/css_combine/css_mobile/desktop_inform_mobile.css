@@ -1,4 +1,4 @@
-@media (min-width: 681px) {
+@media (max-width: 680px) {
   .inform_background {
     width: 100%;
     height: 100vh;

@@ -1,0 +1,42 @@
+@media (max-width: 680px) {
+  /*appbar*/
+  .green-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(60, 216, 141, 1);
+    width: 100vw;
+    color: rgba(0, 0, 0, 1);
+    align-items: center;
+    z-index: 1000;
+    height: 8.57142857142857vh;
+  }
+
+  .nav-content {
+    display: flex; /* 새로운 플렉스박스를 생성합니다. */
+    align-items: center; /* 수직 방향(크로스 축) 가운데 정렬합니다. */
+    justify-content: center;
+    width: 100vw;
+    gap: 54.44444444444444vw;
+  }
+
+  .logo {
+    width: 22.22222222222222vw;
+    height: 4.46428571428571vh;
+  }
+
+  .nav-text {
+    color: #000;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Noto Sans KR;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 153.846% */
+    text-decoration: none; /* 밑줄 없음 설정 */
+  }
+  /*appbar*/
+}

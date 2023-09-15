@@ -1,4 +1,4 @@
-@media (min-width: 681px) {
+@media (max-width: 680px) {
   /*fAB*/
   .kakaotalk {
     position: fixed; /* 화면에 고정 */

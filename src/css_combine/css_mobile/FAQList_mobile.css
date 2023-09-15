@@ -1,4 +1,4 @@
-@media (min-width: 681px) {
+@media (max-width: 680px) {
   .faq-section {
     margin: 16px 0 0 0px;
     border: 1px solid #ccc;

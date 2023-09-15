@@ -1,9 +1,7 @@
-@media (min-width: 681px) {
-  /*1page*/
-
+@media (max-width: 680px) {
   .green-background {
-    width: 100%;
-    height: 866px;
+    width: 100vw;
+    height: 100vh;
     background: #3cd88d;
     display: flex;
     justify-content: center;
@@ -11,13 +9,14 @@
     position: relative; /* 상대적 위치 설정 */
   }
 
-  /* container 스타일 */
   .copycontainer_default {
-    width: 1216px;
     display: flex;
     flex-direction: column; /* 세로로 배치 */
     justify-content: space-between; /* 내부 요소 사이에 공간을 벌립니다. */
-    align-items: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50vh;
+    width: 100vw;
   }
 
   /* text-content 스타일 */
@@ -28,8 +27,8 @@
   .home-buttoncontainer {
     flex-shrink: 0;
     display: flex;
-    gap: 12px; /* 버튼 사이의 간격을 12px로 설정 */
-    margin-top: 39px;
+    gap: 3.33333333333333vw; /* 버튼 사이의 간격을 12px로 설정 */
+    margin-top: 2.5vh;
   }
 
   .custom-button1 {
@@ -38,51 +37,63 @@
     color: #fff;
 
     border: none;
+    width: 43.33333333333333vw;
+    height: 8.92857142857143vh;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
-    padding: 19px 22px;
-    align-items: flex-start;
+    padding: 16px 22px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
-    font-size: 20px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 129.3%; /* 25.86px */
-    width: Hug (141px);
-    height: Hug (64px);
-    font-family: Noto Sans KR;
+    line-height: 129.3%; /* 18.102px */
   }
 
   .custom-button2 {
-    width: Hug (141px);
-    height: Hug (64px);
-    gap: 10px;
-    display: flex;
-    padding: 19px 22px;
-    align-items: flex-start;
-    color: #fff;
-    cursor: pointer;
+    width: 43.33333333333333vw;
+    height: 8.92857142857143vh;
     border-radius: 8px;
     border: 1px solid #06c368;
-    background: #fff;
     color: #06c368;
+    background: #fff;
+    gap: 10px;
+    display: flex;
+    padding: 16px 22px;
+    cursor: pointer;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    padding: 16px 22px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
     font-feature-settings: "clig" off, "liga" off;
-    font-size: 20px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 129.3%; /* 25.86px */
-    font-family: Noto Sans KR;
+    line-height: 129.3%; /* 18.102px */
   }
+
+  /* 이미지 스타일 */
 
   .desktop-home-text1 {
     color: #fff;
+    text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-
-    font-size: 71px;
+    font-family: Noto Sans KR;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
-    line-height: 87.9px;
+    line-height: 123.8%; /* 43.33px */
     letter-spacing: -2.5px;
   }
 
@@ -92,55 +103,27 @@
   .lowest-price-text {
     color: var(--yellowgreen020, #e4ffcf);
     font-feature-settings: "clig" off, "liga" off;
-    font-size: 71px;
+    font-family: Noto Sans KR;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
-    line-height: 87.9px;
+    line-height: 123.8%;
     letter-spacing: -2.5px;
 
     text-align: left;
   }
   .desktop-home-text2 {
     color: var(--grayscale000, #fff);
+    text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-
-    font-size: 24px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.5px;
-    margin-top: 28px;
+    margin-top: 2.5vh;
   }
+
   /*1page*/
-}
-
-.main_human1 {
-  position: absolute; /* 절대적 위치 설정 */
-  top: 0;
-
-  /* 미디어 쿼리를 사용하여 right 속성 조절 */
-  @media (min-width: 1441px) {
-    right: 8vw; /* vw가 1440 초과인 경우 */
-  }
-
-  @media (min-width: 681px) and (max-width: 1440px) {
-    right: calc(-1vw); /* vw가 680 이상 1440 이하인 경우 */
-  }
-
-  @media (max-width: 680px) {
-    display: none;
-    right: calc(-2vw); /* vw가 680 이상 1440 이하인 경우 */
-  }
-}
-
-.main_human2 {
-  display: none;
-  @media (max-width: 680px) {
-    position: absolute; /* 절대적 위치 설정 */
-    width: 110.5555555555556vw;
-    height: 53.21428571428571vh;
-    top: 5%;
-    object-fit: contain;
-    display: block;
-  }
 }
