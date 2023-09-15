@@ -148,84 +148,9 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="revieweffect">
-            <img
-              src={increasearrow}
-              alt="increasearrow"
-              className="increasearrow1"
-            />
-            <img
-              src={reviewmaineffect}
-              alt="reviewmaineffect"
-              className="reviewmaineffect"
-            />
-            <img
-              src={increasearrow}
-              alt="increasearrow.png"
-              className="increasearrow2"
-            />
-          </div>
-          <div className="noRevieEffect">구매율 저조</div>
         </div>
       </div>
-      <div className="FAQfooterbackground">
-        <div className="reviewMarketBorder" style={{ marginBottom: "66px" }}>
-          <p className="page3maintext" style={{ marginTop: "56px" }}>
-            바로 리뷰 수집이 가능한 마켓
-          </p>
-          <div className="grid_container">
-            {imgData.images.map((_, index) => (
-              <div key={index} className="grid_item">
-                <img
-                  src={require(`../img/Market${index + 1}.png`)}
-                  alt={`Market ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-          <p className="page3bottomtext" style={{ marginTop: "154px" }}>
-            더 많은 마켓이 추가될 예정입니다
-          </p>
-        </div>
-        <div className="grey-background">
-          <p className="page4maintext">자주 묻는 질문 </p>
-          <FAQList />
-        </div>
-        <div className="container">
-          <div className="grey-supportbackground">아아</div>
-          <div className="black-supportbackground">아아</div>
-          <div className="green-box">
-            <div className="green-boxContent">
-              <span className="green-boxText">
-                더 궁금하신 점이 있으신가요?
-              </span>
-              <div className="green-boxButton">
-                <Link to="/desktopinform" className="green-boxButton">
-                  문의하기
-                </Link>
-              </div>
-              <img
-                className="green_boxImage1"
-                src={green_boxImage1}
-                alt="Top Left"
-              />
-              <img
-                className="green_boxImage2"
-                src={green_boxImage2}
-                alt="Bottom Right"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <img className="logo_footer" src={logo_footer} alt="logo_footer" />
-          법인 : 주식회사 테크프리 | 대표 : 김도언 | 이용약관 | 개인정보
-          처리방침
-          <br />
-          사업자등록번호 : 779-88-02908 | 주소 : 서울특별시 서초구 사임당로8길
-          13, 4층 402호 에이514(서초동, 제일빌딩) |{" "}
-        </div>
-      </div>
+      <div className="FAQfooterbackground"></div>
     </div>
   );
 }
