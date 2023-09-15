@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import DesktopInform from "./pages/DesktopInform";
-import MobileHome from "./pages/mobileHome";
 
 function App() {
   const navigate = useNavigate();
@@ -36,7 +35,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/desktopinform" element={<DesktopInform />} />
-        <Route path="/Mobile" element={<MobileHome />} />
       </Routes>
     </div>
   );
