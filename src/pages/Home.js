@@ -5,7 +5,7 @@ import main_human1 from "../img/messages1.png";
 import main_human2 from "../img/mainimage(big).png";
 import review1protect from "../img/review1Protect.png";
 import review2protect from "../img/review2Protect.png";
-
+import review_effect_mobile from "../img/buy(mobile).png";
 import kakaotalk from "../img/kakaotalk.png";
 import review1Score from "../img/4.6STAR.png";
 import review2Score from "../img/4.7STAR.png";
@@ -136,21 +136,108 @@ function Home() {
             <div className="review2_line1">
               <span className="review2_name">액정보호방탄필름</span>
               <img
+                className="review2score"
                 src={review2Score}
                 alt="review2Score"
-                className={review2Score}
               />
             </div>
-            <div className="reivew2_line2">
+            <div className="review2_line2">
               <span className="review2_name">9900원</span>
               <div className="review2_amount">
                 <span></span>리뷰 6개
               </div>
             </div>
           </div>
+          <div className="revieweffect">
+            <img
+              src={increasearrow}
+              alt="increasearrow"
+              className="increasearrow1"
+            />
+            <img
+              src={reviewmaineffect}
+              alt="reviewmaineffect"
+              className="reviewmaineffect"
+            />
+            <img
+              src={increasearrow}
+              alt="increasearrow.png"
+              className="increasearrow2"
+            />
+            <img
+              src={review_effect_mobile}
+              alt="review_effect"
+              className="review_effect_mobile"
+            />
+          </div>
+          <div className="noReviewEffect">구매율 저조</div>
         </div>
       </div>
-      <div className="FAQfooterbackground"></div>
+      <div className="FAQfooterbackground">
+        <div className="reviewMarketBorder">
+          <p className="page3maintext">바로 리뷰 수집이 가능한 마켓</p>
+          <div className="grid_container">
+            {imgData.images.map((_, index) => (
+              <div key={index}>
+                <img
+                  src={require(`../img/Market${index + 1}.png`)}
+                  alt={`Market ${index + 1}`}
+                  className="grid_item"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="page3bottomtext">더 많은 마켓이 추가될 예정입니다</p>
+        </div>
+        <div className="grey-background">
+          <p className="page4maintext">자주 묻는 질문 </p>
+          <FAQList />
+        </div>
+        <div className="container">
+          <div className="grey-supportbackground">아아</div>
+          <div className="black-supportbackground">아아</div>
+          <div className="green-box">
+            <div className="green-boxContent">
+              <span className="green-boxText">
+                더 궁금하신 점이 있으신가요?
+              </span>
+              <div className="green-boxButton">
+                <Link to="/desktopinform" className="green-boxButton">
+                  서비스 문의
+                </Link>
+              </div>
+              <img
+                className="green_boxImage1"
+                src={green_boxImage1}
+                alt="Top Left"
+              />
+              <img
+                className="green_boxImage2"
+                src={green_boxImage2}
+                alt="Bottom Right"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <img className="logo_footer" src={logo_footer} alt="logo_footer" />
+          법인 : 주식회사 테크프리 | 대표 : 김도언 | 이용약관 | 개인정보
+          처리방침
+          <br />
+          사업자등록번호 : 779-88-02908 |
+          <br />
+          주소 : 서울특별시 서초구 사임당로8길 13, 4층 402호 에이514(서초동,
+          제일빌딩) |{" "}
+        </div>
+        <div className="footer_mobile">
+          <img className="logo_footer" src={logo_footer} alt="logo_footer" />
+          법인 : 주식회사 테크프리 | 대표 : 김도언 | 이용약관 | 개인정보
+          처리방침
+          <br />
+          사업자등록번호 : 779-88-02908 |<br /> 주소 : 서울특별시 서초구
+          사임당로8길 13, 4층 402호 에이514(서초동, 제일빌딩) |{" "}
+        </div>
+      </div>
     </div>
   );
 }

@@ -7,16 +7,10 @@ function FAQSection({ question, answer }) {
     setIsExpanded(!isExpanded);
   };
 
-  // question에서 "Q"를 분리
-  const questionParts = question.split(" ");
-  const questionPrefix = questionParts[0]; // "Q"
-  const questionText = questionParts.slice(1).join(" "); // 나머지 부분
-
   return (
     <div className="faq-section" onClick={toggleExpansion}>
       <div className="question">
-        <span className="question-prefix">{questionPrefix}</span>
-        {questionText}
+        {question}
         <span className={`arrow ${isExpanded ? "expanded" : ""}`}></span>
       </div>
       {isExpanded && <div className="answer">{answer}</div>}
@@ -25,7 +19,12 @@ function FAQSection({ question, answer }) {
 }
 const faqData = [
   {
-    question: "Q 리뷰쏙을 이용하려면 설치해야하나요?",
+    question: (
+      <div className="FAQ_question">
+        <span className="question-prefix">Q</span>새로 추가된 상품의 리뷰도
+        추가로 수집할 수 있나요?
+      </div>
+    ),
     answer: (
       <div>
         설치가 필요하지 않습니다!
@@ -35,7 +34,12 @@ const faqData = [
     ),
   },
   {
-    question: "Q 내 스마트스토어로 수집된 리뷰를 옮기는게 가능한가요?",
+    question: (
+      <div className="FAQ_question">
+        <span className="question-prefix">Q</span>내 스마트스토어로 수집된
+        리뷰를 옮기는게 가능한가요?
+      </div>
+    ),
     answer: (
       <div>
         자사몰에만 리뷰 이관이 가능합니다.
@@ -55,7 +59,12 @@ const faqData = [
     ),
   },
   {
-    question: "Q 새로 추가된 상품의 리뷰도 추가로 수집할 수 있나요?",
+    question: (
+      <div className="FAQ_question">
+        <span className="question-prefix">Q</span>새로 추가된 상품의 리뷰도
+        추가로 수집할 수 있나요?
+      </div>
+    ),
     answer: (
       <div>
         리뷰 이관은 신청 시의 정보를 기준으로 합니다.
@@ -65,7 +74,12 @@ const faqData = [
     ),
   },
   {
-    question: "Q 부정적인 내용이 포함된 리뷰를 필터링할 수 있나요?",
+    question: (
+      <div className="FAQ_question">
+        <span className="question-prefix">Q</span>부정적인 내용이 포함된 리뷰를
+        필터링할 수 있나요?
+      </div>
+    ),
     answer: (
       <div>
         가능합니다. <br />

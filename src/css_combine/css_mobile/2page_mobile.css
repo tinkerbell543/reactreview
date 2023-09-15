@@ -27,7 +27,7 @@
   }
   .black-background {
     width: 100vw;
-    height: 1068px;
+    height: 87.32678571428571vh;
     background: rgba(37, 37, 37, 1);
     display: flex;
     justify-content: flex-start;
@@ -39,6 +39,7 @@
     width: 51.28583333333333vw;
     height: 22.02142857142857vh;
     box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 8px 8px;
     z-index: 1;
     .review1_name {
       color: #252525;
@@ -64,10 +65,10 @@
       background: #5aeba5;
       box-sizing: border-box;
       position: relative; /* 부모 요소를 relative로 설정합니다. */
-      width: 22.77777777777778vw;
-      height: 2.85714285714286vh;
+      width: 82px;
+      height: 3.39285714285714vh;
       flex-shrink: 0;
-      padding: 0.275vh 0.55555555555556vw 0.26071428571429vh 0.55555555555556vw;
+      padding: 0 0.55555555555556vw 0 0.55555555555556vw;
     }
 
     .review1protect {
@@ -89,7 +90,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.78571428571429vh 2.675vw 1.67857142857143vh 3.03333333333333vw;
+      padding: 0.43571428571429vh 2.675vw 1.67857142857143vh 3.03333333333333vw;
     }
   }
 
@@ -98,6 +99,7 @@
     width: 46.77222222222222vw;
     height: 22.02142857142857vh;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 0px 0px 8px 8px;
 
     .review2_name {
       color: #252525;
@@ -120,7 +122,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0.43571428571429vh 2.68333333333333vw 1.67857142857143vh
-        1.85357142857143vw;
+        2.88333333333333vw;
     }
     .review2_amount {
       color: #000;
@@ -133,21 +135,21 @@
       line-height: normal;
       letter-spacing: 0.5px;
     }
+    .review2score {
+      width: 6.66388888888889vw;
+      height: 2.85714285714286vh;
+    }
     .review2protect {
       width: 46.77222222222222vw;
       height: 12.36428571428571vh;
       flex-shrink: 0;
     }
-    .review2score {
-      width: 6.66388888888889vw;
-      height: 2.85714285714286vh;
-    }
   }
 
   .revieweffect {
     position: absolute;
-    width: 556px;
-    height: 508px; /* 이미지 높이에 따라 조절하세요 */
+    width: 64.16666666666667vw;
+    height: 43.03571428571429vh;
 
     background-size: cover; /* 이미지를 컨테이너에 맞게 조절 */
     background-repeat: no-repeat; /* 이미지 반복 없음 */
@@ -157,7 +159,6 @@
     align-items: center;
     display: flex; /* 내부 내용을 가로로 나열하기 위해 Flex 사용 */
     bottom: 0; /* 아래에 위치하도록 설정 */
-    left: 7%; /* 왼쪽에 위치하도록 설정 */
   }
 
   .increasearrow1,
@@ -166,6 +167,16 @@
     position: absolute;
     top: 50%; /* 상위 컨테이너의 세로 중앙에 배치 */
     transform: translateY(-50%);
+    display: none;
+  }
+
+  .review_effect_mobile {
+    position: absolute;
+    top: 50%; /* 상위 컨테이너의 세로 중앙에 배치 */
+    transform: translateY(-50%);
+    width: 64.16666666666667vw;
+    height: 43.03571428571429vh;
+    z-index: 3; /*  */
   }
 
   .increasearrow1 {
@@ -187,7 +198,7 @@
     height: 299px;
     z-index: 2;
   }
-  .noRevieEffect {
+  .noReviewEffect {
     background: linear-gradient(
       180deg,
       #ababab 0%,
@@ -196,8 +207,8 @@
     );
 
     position: absolute;
-    width: 313px;
-    height: 185px; /* 이미지 높이에 따라 조절하세요 */
+    width: 31.66666666666667vw;
+    height: 15.60892857142857vh; /* 이미지 높이에 따라 조절하세요 */
 
     background-size: cover; /* 이미지를 컨테이너에 맞게 조절 */
     background-repeat: no-repeat; /* 이미지 반복 없음 */
@@ -210,7 +221,7 @@
     bottom: 0; /* 아래에 위치하도록 설정 */
     left: 62%; /* 왼쪽에 위치하도록 설정 */
     font-family: Noto Sans KR;
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 900;
     line-height: normal;
     letter-spacing: 1.5px;

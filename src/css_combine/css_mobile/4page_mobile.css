@@ -8,17 +8,18 @@
     flex-direction: column; /* 세로로 배치 */
     align-items: center;
     position: relative; /* 상대적 위치 설정 */
-    padding: 0 0 64px 0;
+    padding: 0 0 8.57142857142857vh 0;
   }
   .page4maintext {
     color: #2f2f2f;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 56px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 72.408px */
-    margin: 80px 0 24px 0;
+    margin: 4.28571428571429vh 0 2.14285714285714vh 0;
+    letter-spacing: 0.5px;
   }
 }

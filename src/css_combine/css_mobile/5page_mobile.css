@@ -1,7 +1,7 @@
 @media (max-width: 680px) {
   .grey-supportbackground {
-    width: 100%;
-    height: 200px;
+    width: 100vw;
+    height: 9.46428571428571vh;
     background: rgba(245, 245, 245, 1);
     display: flex;
     justify-content: flex-start;
@@ -12,8 +12,8 @@
   }
 
   .black-supportbackground {
-    width: 100%;
-    height: 200px;
+    width: 100vw;
+    height: 9.46428571428571vh;
     background: rgba(37, 37, 37, 1);
     display: flex;
     justify-content: flex-start;
@@ -24,8 +24,8 @@
   }
   .container {
     position: relative;
-    width: 100%;
-    height: 400px;
+    width: 100vw;
+    height: 18.92857142857143vh;
     margin: 0 auto;
     align-items: center;
     justify-content: center; /* 가운데 정렬로 수정 */
@@ -36,12 +36,12 @@
     top: 0px;
     left: 50%; /* 왼쪽 가장자리를 중앙으로 이동 */
     transform: translateX(-50%); /* 중앙 정렬을 위해 X 축으로 이동시킴 */
-    width: 1216px; /* 녹색 상자의 너비 */
-    height: 400px; /* 녹색 상자의 높이 */
+    width: 89.99996666666667vw;
+    height: 18.92857142857143vh;
     background: rgba(33, 214, 127, 1);
     z-index: 1; /* 다른 요소들보다 맨 앞에 띄우기 위해 높은 z-index 값 설정 */
     flex-shrink: 0;
-    border-radius: 108px;
+    border-radius: 13px;
     box-sizing: border-box;
     display: flex; /* flex 컨테이너로 설정 */
     justify-content: center; /* 수평 가운데 정렬 */
@@ -57,7 +57,7 @@
     align-items: center;
   }
   .green-boxText {
-    font-size: 48px;
+    font-size: 16px;
 
     color: rgba(255, 255, 255, 1);
     text-align: center;
@@ -66,26 +66,28 @@
 
     font-style: normal;
     font-weight: 700;
-    line-height: 129.3%; /* 72.408px */
+    line-height: 129.3%;
   }
   .green-boxButton {
-    width: 589px;
-    height: 64px;
+    width: 43.33333333333333vw;
+    height: 8.92857142857143vh;
     background: var(--grayscale095, #252525);
     display: flex;
     justify-content: center;
     flex-direction: column; /* 세로로 배치 */
     align-items: center;
     position: relative; /* 상대적 위치 설정 */
-    margin: 19px 22px 19px 22px;
+
+    margin-top: 5px;
     z-index: 50;
     border-radius: 8px;
+    gap: 10px;
     border-color: transparent;
     border-width: 2px;
     color: rgba(255, 255, 255, 1);
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 72.408px */
@@ -93,26 +95,45 @@
   }
   .green_boxImage1 {
     position: absolute;
+    width: 27vw;
+    height: 14vh;
     top: 0;
     left: 0;
-    opacity: 10%;
+    opacity: 20%;
   }
 
   .green_boxImage2 {
     position: absolute;
+    width: 27vw;
+    height: 14vh;
     bottom: 0;
     right: 0;
-    opacity: 10%;
+    opacity: 20%;
   }
   .footer {
-    width: 1216px;
-    height: 100px;
-    margin: 56px 0 72px 0;
+    display: none;
+  }
+  .footer_mobile {
+    width: 89.99996666666667vw;
+    height: 17.5vh;
+    margin: 2.32142857142857vh 0 10.35714285714286vh 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 1.60714285714286vh;
+    color: var(--grayscale000, #fff);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Noto Sans KR;
+    font-size: 5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4475;
+    letter-spacing: 0.5px;
     color: rgba(255, 255, 255, 0.7);
+  }
+  .logo_footer {
+    width: 26.11111111111111vw;
+    height: 5.17857142857143vh;
   }
 }

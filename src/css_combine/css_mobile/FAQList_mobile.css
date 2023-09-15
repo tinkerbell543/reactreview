@@ -1,16 +1,16 @@
 @media (max-width: 680px) {
   .faq-section {
-    margin: 16px 0 0 0px;
+    margin: 1.42857142857143vh 0 0 0px;
     border: 1px solid #ccc;
-    padding: 10px;
+
     cursor: pointer;
     position: relative;
-    width: 1216px;
+    width: 90vw;
     display: flex;
-    border-radius: 40px;
+    border-radius: 13px;
     border: 1px solid #cdcdcd;
     background: #fff;
-    padding: 32px 44px;
+    padding: 3.57142857142857vh 3.88888888888889vw;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -22,7 +22,7 @@
     color: #252525;
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 24px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -38,11 +38,15 @@
     color: #252525;
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 20px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.5px;
+  }
+  .FAQ_question {
+    display: flex;
+    gap: 10px;
   }
 
   .question-prefix {
@@ -50,11 +54,11 @@
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 24px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
     letter-spacing: 0.5px;
-    margin-right: 20px;
+    margin-right: 2.22222222222222vw;
   }
 }

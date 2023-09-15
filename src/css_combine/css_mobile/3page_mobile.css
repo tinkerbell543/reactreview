@@ -1,7 +1,7 @@
 @media (max-width: 680px) {
   .FAQfooterbackground {
-    width: 100%;
-    height: 2238px;
+    width: 100vw;
+    height: auto;
     background: rgba(37, 37, 37, 1);
     display: flex;
     justify-content: flex-start;
@@ -11,17 +11,17 @@
   }
 
   .reviewMarketBorder {
-    border-radius: 108px;
     border-color: rgba(255, 255, 255, 1);
     background: #252525;
-    width: 1216px;
+    width: 100vw;
     flex-direction: column; /* main 방향 가로 배치 */
-    justify-content: center; /* 내부 요소 사이에 공간을 벌립니다. */
-    height: 800px;
+    justify-content: flex-start; /* 내부 요소 사이에 공간을 벌립니다. */
+    height: 96.31696428571429vh;
     position: relative; /* 부모 요소에 대해 position: relative; 설정 */
     border: 1px solid rgba(255, 255, 255, 0.3);
     align-items: center; /* 그리드 가운데 정렬 */
     box-sizing: border-box;
+    display: flex;
   }
 
   .page3maintext {
@@ -29,35 +29,33 @@
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 36px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 46.548px */
     box-sizing: border-box;
+    letter-spacing: 0.5px;
+    margin-top: 5.71428571428571vh;
   }
 
   .grid_container {
     display: inline-grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 88px 80px 0 80px;
-    justify-content: center; /* 그리드 가운데 정렬 */
-    align-items: center; /* 그리드 가운데 정렬 */
-    grid-row-gap: 32px;
-    grid-column-gap: 64px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4.28571428571429vh 14.16666666666667vw 0 14.44444444444444vw;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 3.57142857142857vh;
+    grid-column-gap: 7.22222222222222vw;
   }
 
-  /* 화면 크기가 768px 이하일 때 그리드 열 개수 변경 */
-  @media (max-width: 1000px) {
-    .grid_container {
-      grid-template-columns: repeat(3, 1fr); /* 3개의 열로 변경 */
-    }
-  }
   .grid_item {
-    /* 각 동그라미의 스타일 설정 */
-    width: 160px; /* 동그라미의 너비 설정 */
-    height: 160px; /* 동그라미의 높이 설정 */
+    height: 12.14285714285714vh;
   }
 
+  /* 마지막 행의 아이템을 가운데로 정렬합니다. */
+  .grid_container > :nth-child(10) {
+    grid-column: 2 / 3; /* 두 번째 열에 배치 */
+  }
   .page3bottomtext {
     font-family: Noto Sans KR;
     font-size: 24px;
@@ -66,5 +64,14 @@
     letter-spacing: 0px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
+    margin-top: 7.14285714285714vh;
+    margin-bottom: 5.71428571428571vh;
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 그리드 열 개수 변경 */
+@media (max-width: 1000px) {
+  .grid_container {
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 변경 */
   }
 }
