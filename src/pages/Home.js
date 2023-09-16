@@ -204,7 +204,11 @@ function Home() {
                 더 궁금하신 점이 있으신가요?
               </span>
               <div className="green-boxButton">
-                <Link to={path} className="green-boxButton">
+                <Link
+                  to={path}
+                  className="green-boxButton"
+                  style={{ margin: "0px" }}
+                >
                   문의하기
                 </Link>
               </div>

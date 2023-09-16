@@ -147,10 +147,11 @@
   display: none;
   @media (max-width: 680px) {
     position: absolute; /* 절대적 위치 설정 */
-    width: 110.5555555555556vw;
+    width: 100vw;
     height: 53.21428571428571vh;
-    top: 5%;
-    object-fit: contain;
+    top: 3%;
+    right: 4%;
+    object-fit: cover;
     display: block;
   }
 }
