@@ -18,7 +18,7 @@
     justify-content: flex-start; /* 내부 요소 사이에 공간을 벌립니다. */
     height: 96.31696428571429vh;
     position: relative; /* 부모 요소에 대해 position: relative; 설정 */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
     align-items: center; /* 그리드 가운데 정렬 */
     box-sizing: border-box;
     display: flex;
@@ -49,7 +49,7 @@
   }
 
   .grid_item {
-    height: 12.14285714285714vh;
+    height: 68px;
   }
 
   /* 마지막 행의 아이템을 가운데로 정렬합니다. */

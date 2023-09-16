@@ -25,7 +25,9 @@
     width: 138px;
     height: 43px;
   }
-
+  .link {
+    cursor: pointer;
+  }
   .nav-text {
     color: #000; /* 텍스트 색상을 검정색으로 설정 */
     text-align: right; /* 텍스트를 오른쪽 정렬로 설정 */

@@ -1,4 +1,7 @@
 @media (max-width: 680px) {
+  body {
+    overflow-x: hidden;
+  }
   .green-background {
     width: 100vw;
     height: 100vh;
@@ -40,13 +43,14 @@
     width: 43.33333333333333vw;
     height: 8.92857142857143vh;
     border-radius: 8px;
-    cursor: pointer;
+
     display: flex;
     padding: 16px 22px;
     align-items: center;
     gap: 10px;
     justify-content: center;
-
+  }
+  .custom-button1-text {
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
@@ -54,8 +58,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 18.102px */
+    cursor: pointer;
+    text-decoration: none;
   }
-
   .custom-button2 {
     width: 43.33333333333333vw;
     height: 8.92857142857143vh;

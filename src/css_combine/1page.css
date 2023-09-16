@@ -49,11 +49,21 @@
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 25.86px */
-    width: Hug (141px);
-    height: Hug (64px);
+    width: hug(141px);
+    height: (64px);
     font-family: Noto Sans KR;
   }
-
+  .custom-button1-text {
+    color: var(--grayscale000, #fff);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Noto Sans KR;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 129.3%; /* 25.86px */
+    cursor: pointer;
+    text-decoration: none;
+  }
   .custom-button2 {
     width: Hug (141px);
     height: Hug (64px);

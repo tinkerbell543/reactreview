@@ -125,7 +125,7 @@
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
     font-family: Noto Sans KR;
-    font-size: 5px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4475;
@@ -133,7 +133,7 @@
     color: rgba(255, 255, 255, 0.7);
   }
   .logo_footer {
-    width: 26.11111111111111vw;
-    height: 5.17857142857143vh;
+    width: 94px;
+    height: 29px;
   }
 }

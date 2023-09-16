@@ -27,7 +27,7 @@
   }
   .black-background {
     width: 100vw;
-    height: 87.32678571428571vh;
+    height: auto;
     background: rgba(37, 37, 37, 1);
     display: flex;
     justify-content: flex-start;

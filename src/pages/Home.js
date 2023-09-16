@@ -6,7 +6,7 @@ import main_human2 from "../img/mainimage(big).png";
 import review1protect from "../img/review1Protect.png";
 import review2protect from "../img/review2Protect.png";
 import review_effect_mobile from "../img/buy(mobile).png";
-import kakaotalk from "../img/kakaotalk.png";
+import kakaotalk from "../img/kakaotalk_fit.png";
 import review1Score from "../img/4.6STAR.png";
 import review2Score from "../img/4.7STAR.png";
 import "../css_combine/css_mobile/home_mobile.css";
@@ -19,6 +19,11 @@ import green_boxImage2 from "../img/Vector (1).png";
 import logo_footer from "../img/logo_02_3 1.png";
 
 function Home() {
+  const windowWidth = window.innerWidth;
+
+  // 조건에 따라 다른 경로 생성
+  const path = windowWidth <= 680 ? "/mobileinform" : "/desktopinform";
+
   const imgData = {
     images: [
       "Market1",
@@ -73,10 +78,7 @@ function Home() {
             </div>
             <div className="home-buttoncontainer">
               <button className="custom-button1">
-                <Link
-                  to="/desktopinform"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
+                <Link to={path} className="custom-button1-text">
                   서비스 신청
                 </Link>
               </button>
@@ -202,8 +204,8 @@ function Home() {
                 더 궁금하신 점이 있으신가요?
               </span>
               <div className="green-boxButton">
-                <Link to="/desktopinform" className="green-boxButton">
-                  서비스 문의
+                <Link to={path} className="green-boxButton">
+                  문의하기
                 </Link>
               </div>
               <img
@@ -242,12 +244,17 @@ function Home() {
   );
 }
 function AppBar() {
+  const windowWidth = window.innerWidth;
+
+  // 조건에 따라 다른 경로 생성
+  const path = windowWidth <= 680 ? "/mobileinform" : "/desktopinform";
+
   return (
     <div className="green-nav">
       <div className="nav-content">
         <img src={logo} alt="로고 이미지" className="logo" />
         <h1 className="nav-text">
-          <Link to="/desktopinform" className="nav-text">
+          <Link to={path} className="nav-text">
             문의하기
           </Link>
         </h1>
