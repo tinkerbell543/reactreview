@@ -155,11 +155,14 @@ const DesktopInform = () => {
   };
 
   return (
-    <div>
+    <div style={{ minWidth: "1200px", minHeight: "780px" }}>
       <Helmet>
         <title>리뷰쏙-문의사항 접수</title>
       </Helmet>
-      <div className="inform_background">
+      <div
+        style={{ minWidth: "1200px", minHeight: "780px" }}
+        className="inform_background"
+      >
         <div className="iconInform">
           <img src={logo} alt="이미지" />
           <div className="inform_container">

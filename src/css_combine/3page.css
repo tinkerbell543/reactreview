@@ -1,7 +1,7 @@
 @media (min-width: 681px) {
   .FAQfooterbackground {
     width: 100%;
-    height: 2238px;
+    height: auto;
     background: rgba(37, 37, 37, 1);
     display: flex;
     justify-content: flex-start;
@@ -49,12 +49,6 @@
     grid-column-gap: 64px;
   }
 
-  /* 화면 크기가 768px 이하일 때 그리드 열 개수 변경 */
-  @media (max-width: 1000px) {
-    .grid_container {
-      grid-template-columns: repeat(3, 1fr); /* 3개의 열로 변경 */
-    }
-  }
   .grid_item {
     /* 각 동그라미의 스타일 설정 */
     width: 160px; /* 동그라미의 너비 설정 */

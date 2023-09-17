@@ -34,6 +34,5 @@
   src: url(../public/fonts/Poppins-Regular.ttf);
 }
 
-.body {
-  margin-right: calc(100vw - 100%); /* 스크롤 바 너비만큼 오른쪽 마진 추가 */
+@media screen and (min-width: 681px) and (max-width: 1200px) {
 }

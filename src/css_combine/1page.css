@@ -129,17 +129,25 @@
   top: 0;
 
   /* 미디어 쿼리를 사용하여 right 속성 조절 */
-  @media (min-width: 1441px) {
+  @media (min-width: 1592px) {
     right: 8vw; /* vw가 1440 초과인 경우 */
   }
 
-  @media (min-width: 681px) and (max-width: 1440px) {
-    right: calc(-1vw); /* vw가 680 이상 1440 이하인 경우 */
+  @media (min-width: 1395px) and (max-width: 1591px) {
+    right: 7vw; /* vw가 680 이상 1440 이하인 경우 */
+    top: 8%;
+    width: 50vw;
+    max-width: 934px;
   }
 
+  @media (min-width: 681px) and (max-width: 1394px) {
+    right: 0%;
+    width: 60vw;
+    top: 9%;
+    min-width: 741px;
+  }
   @media (max-width: 680px) {
     display: none;
-    right: calc(-2vw); /* vw가 680 이상 1440 이하인 경우 */
   }
 }
 

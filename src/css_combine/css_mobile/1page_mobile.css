@@ -50,6 +50,7 @@
     gap: 10px;
     justify-content: center;
   }
+
   .custom-button1-text {
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;

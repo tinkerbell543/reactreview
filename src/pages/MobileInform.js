@@ -158,10 +158,10 @@ const MobileInform = () => {
         <title>리뷰쏙-문의사항 접수</title>
       </Helmet>
       <div className="white_background">
-        <div className="totalContainer">
-          <div className="inform_container">
-            <div className="inform_Text2">
-              <span className="inform_Text1">서비스 문의</span>
+        <div className="totalContainer_m">
+          <div className="inform_container_m">
+            <div className="inform_Text2_m">
+              <span className="inform_Text1_m">서비스 문의</span>
               <br />
               문의를 남겨주시면
               <br />
@@ -170,31 +170,33 @@ const MobileInform = () => {
             <img
               src={back_arrow}
               alt="이미지"
-              className="back_arrow"
+              className="back_arrow_m"
               onClick={() => navigate(-1)}
             />
           </div>
           <div>
-            <span className="title_style">이름 *</span>
-            <div className="name_combo">
+            <span className="title_style_m">이름 *</span>
+            <div className="name_combo_m">
               <input
                 type="text"
-                className={`textField_name ${nameError ? "nameError" : ""}`}
+                className={`textField_name_m ${nameError ? "nameError_m" : ""}`}
                 id="name"
                 value={name1}
                 onChange={handleNameChange}
                 autoComplete="off" // 자동완성 비활성화
               />
-              {nameError && <span className="nameError">{nameError}</span>}
+              {nameError && <span className="nameError_m">{nameError}</span>}
             </div>
           </div>
           <div>
-            <span className="title_style">휴대폰 번호 *</span>
-            <div className="phone_combo">
+            <span className="title_style_m">휴대폰 번호 *</span>
+            <div className="phone_combo_m">
               <input
                 type="tel"
                 id="phone1"
-                className={`textField_phone ${phoneError ? "phoneError" : ""}`}
+                className={`textField_phone_m ${
+                  phoneError ? "phoneError_m" : ""
+                }`}
                 value={phone1}
                 onChange={handlePhoneChange}
                 maxLength="3"
@@ -204,7 +206,7 @@ const MobileInform = () => {
               <input
                 type="tel"
                 id="phone2"
-                className="textField_phone"
+                className="textField_phone_m"
                 value={phone2}
                 onChange={handlePhoneChange}
                 maxLength="4"
@@ -214,23 +216,25 @@ const MobileInform = () => {
               <input
                 type="tel"
                 id="phone3"
-                className="textField_phone"
+                className="textField_phone_m"
                 value={phone3}
                 onChange={handlePhoneChange}
                 maxLength="4"
                 autoComplete="off" // 자동완성 비활성화
               />
             </div>
-            {phoneError && <span className="phoneError">{phoneError}</span>}
+            {phoneError && <span className="phoneError_m">{phoneError}</span>}
           </div>
           <div>
-            <span className="title_style"> 이메일 *</span>
-            <div className="email_combo">
+            <span className="title_style_m"> 이메일 *</span>
+            <div className="email_combo_m">
               <input
                 type="email"
                 id="email1"
                 style={{ marginRight: "4px" }}
-                className={`textField_email ${emailError ? "emailError" : ""}`}
+                className={`textField_email_m ${
+                  emailError ? "emailError_m" : ""
+                }`}
                 value={email1}
                 onChange={handleEmailChange}
                 autoComplete="off" // 자동완성 비활성화
@@ -240,28 +244,30 @@ const MobileInform = () => {
                 type="email"
                 id="email2"
                 style={{ marginLeft: "3px" }}
-                className={`textField_email ${emailError ? "emailError" : ""}`}
+                className={`textField_email_m ${
+                  emailError ? "emailError_m" : ""
+                }`}
                 value={email2}
                 onChange={handleEmailChange}
                 autoComplete="off" // 자동완성 비활성화
               />
             </div>
-            {emailError && <span className="emailError">{emailError}</span>}
+            {emailError && <span className="emailError_m">{emailError}</span>}
           </div>
           <div>
-            <span className="title_style">문의사항 *</span>
+            <span className="title_style_m">문의사항 *</span>
             <textarea
               id="detail"
-              className={`textField_detail`}
+              className={`textField_detail_m`}
               value={detail}
               onChange={handleDetailChange}
               autoComplete="off" // 자동완성 비활성화
               style={{ zIndex: 3, resize: "none" }}
             />
           </div>
-          <div className="button-container">
+          <div className="button-container_m">
             <button
-              className="inform-button1"
+              className="inform-button1_m"
               style={{ marginTop: "7px" }}
               onClick={handleFormSubmit}
             >
@@ -271,8 +277,8 @@ const MobileInform = () => {
             </button>
 
             {showPopup && (
-              <div className="popup-background">
-                <div className="popup">
+              <div className="popup-background_m">
+                <div className="popup_m">
                   <p>
                     문의 접수가 완료되었습니다!
                     <br />

@@ -1,6 +1,6 @@
 @media (max-width: 680px) {
   /*appbar*/
-  .green-nav {
+  .green-nav_mobile {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,4 +50,9 @@
   line-height: 129.3%; /* 18.102px */
   cursor: pointer;
   text-decoration: none;
+}
+@media (min-width: 681px) {
+  .green-nav_mobile {
+    display: none;
+  }
 }

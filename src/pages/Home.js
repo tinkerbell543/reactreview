@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FAQList from "./FAQList";
 import logo from "../img/logo_02_1.png";
 import main_human1 from "../img/messages1.png";
@@ -19,11 +19,29 @@ import green_boxImage2 from "../img/Vector (1).png";
 import logo_footer from "../img/logo_02_3 1.png";
 
 function Home() {
-  const windowWidth = window.innerWidth;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // 창 크기가 변경될 때마다 호출되는 함수
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    // 이벤트 리스너 등록
+    window.addEventListener("resize", handleResize);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 해제
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // 빈 배열을 전달하여 이펙트가 처음 한 번만 실행되도록 함
+
+  useEffect(() => {
+    console.log("창 크기가 변경되었습니다. 현재 창의 너비:", windowWidth);
+  }, [windowWidth]); // windowWidth 상태가 변경될 때만 이펙트 실행
 
   // 조건에 따라 다른 경로 생성
   const path = windowWidth <= 680 ? "/mobileinform" : "/desktopinform";
-
   const imgData = {
     images: [
       "Market1",
@@ -60,8 +78,9 @@ function Home() {
     window.open(url, "KakaoChatPopup", `width=${width},height=${height}`);
   };
   return (
-    <div>
+    <div style={{ minWidth: "1235px" }}>
       <AppBar></AppBar>
+      <AppBarMobile></AppBarMobile>
       <div className="green-background">
         <div className="copycontainer_default">
           <div className="total-content">
@@ -103,6 +122,7 @@ function Home() {
           className="kakaotalk"
           onClick={openKakaoTalkChat}
         />
+
         <div className="reviews">
           <div className="review1">
             <div style={{ display: "flex", justifyContent: "center" }}>
@@ -227,13 +247,24 @@ function Home() {
         </div>
         <div className="footer">
           <img className="logo_footer" src={logo_footer} alt="logo_footer" />
-          법인 : 주식회사 테크프리 | 대표 : 김도언 | 이용약관 | 개인정보
-          처리방침
-          <br />
-          사업자등록번호 : 779-88-02908 |
-          <br />
-          주소 : 서울특별시 서초구 사임당로8길 13, 4층 402호 에이514(서초동,
-          제일빌딩) |{" "}
+          <div>
+            <span className="footer_gap">법인 : 주식회사 테크프리</span>
+            <span className="footer_gap">|</span>{" "}
+            <span className="footer_gap">대표 : 김도언</span>
+            <span className="footer_gap">| </span>{" "}
+            <span className="footer_gap">이용약관</span>{" "}
+            <span className="footer_gap">|</span> 개인정보 처리방침
+            <span className="footer_gap">
+              <br />
+              사업자등록번호 : 779-88-02908
+            </span>{" "}
+            <span className="footer_gap">| </span>{" "}
+            <span className="footer_gap">
+              주소 : 서울특별시 서초구 사임당로8길 13, 4층 402호 에이514(서초동,
+              제일빌딩){" "}
+            </span>
+            |
+          </div>
         </div>
         <div className="footer_mobile">
           <img className="logo_footer" src={logo_footer} alt="logo_footer" />
@@ -241,30 +272,60 @@ function Home() {
           처리방침
           <br />
           사업자등록번호 : 779-88-02908 |<br /> 주소 : 서울특별시 서초구
-          사임당로8길 13, 4층 402호 에이514(서초동, 제일빌딩) |{" "}
+          사임당로8길 13, 4층 402호 에이514(서초동, 제일빌딩) |
         </div>
       </div>
     </div>
   );
 }
 function AppBar() {
-  const windowWidth = window.innerWidth;
-
-  // 조건에 따라 다른 경로 생성
-  const path = windowWidth <= 680 ? "/mobileinform" : "/desktopinform";
-
   return (
     <div className="green-nav">
       <div className="nav-content">
         <img src={logo} alt="로고 이미지" className="logo" />
         <h1 className="nav-text">
-          <Link to={path} className="nav-text">
+          <Link to="desktopinform" className="nav-text">
             문의하기
           </Link>
         </h1>
       </div>
     </div>
   );
+}
+
+function AppBarMobile() {
+  return (
+    <div className="green-nav_mobile">
+      <div className="nav-content">
+        <img src={logo} alt="로고 이미지" className="logo" />
+        <h1 className="nav-text">
+          <Link to="/mobileinform" className="nav-text">
+            문의하기
+          </Link>
+        </h1>
+      </div>
+    </div>
+  );
+}
+// 요소가 'display: none;'인지 확인하는 함수
+function isElementVisible(element) {
+  return window.getComputedStyle(element).display !== "none";
+}
+
+// 브라우저의 너비 가져오기
+function getBrowserWidth() {
+  const elementsToCheck = document.querySelectorAll(".your-selector"); // 요소의 CSS 선택자로 선택
+  let visibleWidth = window.innerWidth;
+
+  // 'display: none;' 속성을 가진 요소를 제외하고 브라우저의 너비 계산
+  elementsToCheck.forEach((element) => {
+    if (isElementVisible(element)) {
+      const elementRect = element.getBoundingClientRect();
+      visibleWidth -= elementRect.width;
+    }
+  });
+
+  return visibleWidth;
 }
 
 export default Home;

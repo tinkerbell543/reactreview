@@ -1,267 +1,262 @@
-@media (min-width: 681px) {
-  .inform_background {
-    width: 100%;
-    height: 100vh;
-    background: rgba(245, 245, 245, 1);
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* 세로로 배치 */
-    align-items: center;
-    position: relative; /* 상대적 위치 설정 */
-    padding: 0 0 64px 0;
-  }
+.inform_background {
+  width: 100%;
+  height: 100vh;
+  background: rgba(245, 245, 245, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* 세로로 배치 */
+  align-items: center;
+  position: relative; /* 상대적 위치 설정 */
+  padding: 0 0 64px 0;
+}
 
-  .iconInform {
-    display: flex;
-    flex-direction: column;
+.iconInform {
+  display: flex;
+  flex-direction: column;
 
-    align-items: flex-start;
-  }
+  align-items: flex-start;
+}
 
-  .inform_container {
-    margin-top: 47px;
-    width: 1196px;
-    height: 667px;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
+.inform_container {
+  margin-top: 47px;
+  width: 1196px;
+  height: 667px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
 
-    display: flex;
-    flex-direction: row; /* main 방향 가로 배치 */
-    justify-content: flex-start; /* 내부 요소 사이에 공간을 벌립니다. */
-    align-items: flex-start;
-    position: relative; /* 부모 요소에 대해 position: relative; 설정 */
-  }
-  .inform_greencontainer {
-    width: 374px;
-    height: 667px;
-    flex-shrink: 0;
-    border-radius: 40px 0px 0px 40px;
-    background: #3cd88d;
-    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
-    display: flex;
-    flex-direction: column; /* main 방향 가로 배치 */
-    justify-content: center; /* 내부 요소 사이에 공간을 벌립니다. */
-    align-items: center;
+  display: flex;
+  flex-direction: row; /* main 방향 가로 배치 */
+  justify-content: flex-start; /* 내부 요소 사이에 공간을 벌립니다. */
+  align-items: flex-start;
+  position: relative; /* 부모 요소에 대해 position: relative; 설정 */
+}
+.inform_greencontainer {
+  width: 374px;
+  height: 667px;
+  flex-shrink: 0;
+  border-radius: 40px 0px 0px 40px;
+  background: #3cd88d;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column; /* main 방향 가로 배치 */
+  justify-content: center; /* 내부 요소 사이에 공간을 벌립니다. */
+  align-items: center;
+}
+.inform_Text1 {
+  color: #fff;
+  font-family: Noto Sans KR;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.inform_TextContainer {
+  text-align: left; /* 텍스트를 가로로 가운데 정렬합니다. */
+  box-sizing: border-box;
+}
 
-    .inform_Text1 {
-      color: #fff;
-      font-family: Noto Sans KR;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
+.inform_Text2 {
+  color: #fff;
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.inform_maincontainer {
+  margin: 117px 245px 192px 93px;
+  width: 100%;
+  height: fit-content;
 
-    .inform_TextContainer {
-      text-align: left; /* 텍스트를 가로로 가운데 정렬합니다. */
-      box-sizing: border-box;
-    }
+  display: flex;
+  flex-direction: column; /* main 방향 가로 배치 */
+  justify-content: center; /* 내부 요소 사이에 공간을 벌립니다. */
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.row {
+  width: 484px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row; /* main 방향 가로 배치 */
+  justify-content: normal; /* 내부 요소 사이에 공간을 벌립니다. */
+  align-items: flex-start; /* 세로 중앙 정렬 */
+  row-gap: 22px; /* 세로 간격을 25px로 설정 */
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
 
-    .inform_Text2 {
-      color: #fff;
-      font-family: Noto Sans KR;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-  }
+.nameError,
+.emailError,
+.phoneError {
+  color: red;
+  font-size: 12px;
+}
 
-  .inform_maincontainer {
-    margin: 117px 245px 192px 93px;
-    width: 100%;
-    height: fit-content;
+.title_style {
+  color: #252525;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
 
-    display: flex;
-    flex-direction: column; /* main 방향 가로 배치 */
-    justify-content: center; /* 내부 요소 사이에 공간을 벌립니다. */
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
-  .row {
-    width: 484px;
-    height: fit-content;
-    display: flex;
-    flex-direction: row; /* main 방향 가로 배치 */
-    justify-content: normal; /* 내부 요소 사이에 공간을 벌립니다. */
-    align-items: flex-start; /* 세로 중앙 정렬 */
-    row-gap: 22px; /* 세로 간격을 25px로 설정 */
-    margin-bottom: 18px;
-    box-sizing: border-box;
-  }
+.textField_name {
+  width: 231px;
+  height: 35px;
+  box-sizing: border-box;
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid transparent; /* 투명한 border */
+  border-radius: 4px;
+  outline: none; /* 포커스 했을 때 outline 제거 */
+  transition: border-color 0.3s; /* transition 효과 추가 */
+  color: black;
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 400;
+}
+.textField_name:focus,
+.textField_phone:focus,
+.textField_email:focus,
+.textField_detail:focus {
+  border-color: green; /* 포커스시 border 색상을 green으로 변경 */
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(245, 245, 245, 1) inset !important;
+}
+.name_combo {
+  font-size: 14px;
+  font-weight: 400;
+  color: #252525;
+  text-align: left;
+  font-family: Noto Sans KR;
+  box-sizing: border-box;
+}
 
-  .nameError,
-  .emailError,
-  .phoneError {
-    color: red;
-    font-size: 12px;
-  }
+.textField_phone {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid transparent; /* 투명한 border */
+  border-radius: 4px;
+  outline: none; /* 포커스 했을 때 outline 제거 */
+  transition: border-color 0.3s; /* transition 효과 추가 */
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
 
-  .title_style {
-    color: #252525;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px; /* 142.857% */
-  }
+.phone_combo {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+  box-sizing: border-box;
+}
 
-  .textField_name {
-    width: 231px;
-    height: 35px;
-    box-sizing: border-box;
-    background: rgba(245, 245, 245, 1);
-    border: 1px solid transparent; /* 투명한 border */
-    border-radius: 4px;
-    outline: none; /* 포커스 했을 때 outline 제거 */
-    transition: border-color 0.3s; /* transition 효과 추가 */
-    color: black;
-    font-size: 14px;
-    padding: 5px;
-    font-weight: 400;
-  }
-  .textField_name:focus,
-  .textField_phone:focus,
-  .textField_email:focus,
-  .textField_detail:focus {
-    border-color: green; /* 포커스시 border 색상을 green으로 변경 */
-  }
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px rgba(245, 245, 245, 1) inset !important;
-  }
-  .name_combo {
-    font-size: 14px;
-    font-weight: 400;
-    color: #252525;
-    text-align: left;
-    font-family: Noto Sans KR;
-    box-sizing: border-box;
-  }
+.textField_email {
+  width: 231px; /* 최대치로 늘리기 위해 100%로 설정 */
+  height: 35px;
+  display: flex;
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
 
-  .textField_phone {
-    width: 100%;
-    height: 35px;
-    display: flex;
-    background: rgba(245, 245, 245, 1);
-    border: 1px solid transparent; /* 투명한 border */
-    border-radius: 4px;
-    outline: none; /* 포커스 했을 때 outline 제거 */
-    transition: border-color 0.3s; /* transition 효과 추가 */
-    box-sizing: border-box;
-    color: black;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 5px;
-  }
+.email_combo {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
 
-  .phone_combo {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    column-gap: 3px;
-    box-sizing: border-box;
-  }
+  width: 100%; /* 전체 가로 공간을 차지하도록 100%로 설정 */
+  box-sizing: border-box;
+}
 
-  .textField_email {
-    width: 231px; /* 최대치로 늘리기 위해 100%로 설정 */
-    height: 35px;
-    display: flex;
-    background: rgba(245, 245, 245, 1);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
-    box-sizing: border-box;
-    color: black;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 5px;
-  }
+.textField_detail {
+  width: 484px;
+  height: 186px;
+  flex-shrink: 0;
+  display: flex;
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 400;
 
-  .email_combo {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
+  color: black;
+}
+.back_arrow {
+  position: absolute;
+  top: 35px; /* 위로 35px 이동 */
+  right: 35px; /* 오른쪽으로 35px 이동 */
+  cursor: pointer;
+}
+.kite {
+  position: absolute;
+  bottom: -51.17px;
+  right: 31px;
+}
+.popup {
+  position: fixed;
+  border-radius: 5px;
+  top: 0;
+  left: 50%;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  font-size: 14px;
+}
 
-    width: 100%; /* 전체 가로 공간을 차지하도록 100%로 설정 */
-    box-sizing: border-box;
-  }
+.popup button {
+  margin-top: 10px;
+  margin-left: 120px;
+  background-color: #7ec9a4;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
 
-  .textField_detail {
-    width: 484px;
-    height: 186px;
-    flex-shrink: 0;
-    display: flex;
-    background: rgba(245, 245, 245, 1);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
-    box-sizing: border-box;
-    padding: 5px;
-    font-size: 14px;
-    font-weight: 400;
+.popup button:hover {
+  background-color: #3cd88d;
+}
+.popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    color: black;
-  }
-  .back_arrow {
-    position: absolute;
-    top: 35px; /* 위로 35px 이동 */
-    right: 35px; /* 오른쪽으로 35px 이동 */
-    cursor: pointer;
-  }
-  .kite {
-    position: absolute;
-    bottom: -51.17px;
-    right: 31px;
-  }
-  .popup {
-    position: fixed;
-    border-radius: 5px;
-    top: 0;
-    left: 50%;
-    right: 0;
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    font-size: 14px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 다른 요소 위에 표시 */
+}
 
-  .popup button {
-    margin-top: 10px;
-    margin-left: 120px;
-    background-color: #7ec9a4;
-    color: #fff;
-    border: none;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-  }
-
-  .popup button:hover {
-    background-color: #3cd88d;
-  }
-  .popup-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999; /* 다른 요소 위에 표시 */
-  }
-
-  .popup_main {
-    margin-top: 5px;
-    font-size: 13px;
-    text-align: left;
-    opacity: 0.7;
-  }
+.popup_main {
+  margin-top: 5px;
+  font-size: 13px;
+  text-align: left;
+  opacity: 0.7;
 }
