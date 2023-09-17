@@ -41,3 +41,21 @@
   }
   /*appbar*/
 }
+
+@media (max-width: 681px) {
+  /*appbar*/
+  .green-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    background: rgba(60, 216, 141, 1);
+    width: 100vw;
+    color: rgba(0, 0, 0, 1);
+    align-items: center;
+    z-index: 1000;
+    height: 80px;
+    display: none;
+  }
+}

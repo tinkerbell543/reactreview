@@ -51,6 +51,9 @@
     justify-content: center;
   }
 
+  .App {
+    overflow-x: hidden; /* 가로 스크롤 숨김 */
+  }
   .custom-button1-text {
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;

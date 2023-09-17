@@ -153,12 +153,21 @@
 
 .main_human2 {
   display: none;
-  @media (max-width: 680px) {
+  @media (max-width: 500px) {
     position: absolute; /* 절대적 위치 설정 */
     width: 100vw;
     height: 53.21428571428571vh;
     top: 3%;
     right: 4%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (min-width: 501px) and (max-width: 680px) {
+    position: absolute; /* 절대적 위치 설정 */
+    width: 80vw;
+    height: 53.21428571428571vh;
+    top: 3%;
+    right: 12%;
     object-fit: cover;
     display: block;
   }

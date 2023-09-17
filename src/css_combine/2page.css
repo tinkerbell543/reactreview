@@ -1,5 +1,6 @@
 @media (min-width: 681px) {
   /*2page*/
+
   .page2maintext {
     color: #fff;
     text-align: center;
@@ -41,22 +42,14 @@
     flex-direction: column; /* 세로로 배치 */
     align-items: center;
   }
+
   .review1 {
     background: rgba(255, 255, 255, 1);
     width: 558px;
     height: 301px;
     box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.25);
     z-index: 1;
-    .review1_name {
-      color: #252525;
-      font-feature-settings: "clig" off, "liga" off;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.5px;
-      opacity: 0.6;
-    }
+
     .review1_amount {
       color: #252525;
       font-feature-settings: "clig" off, "liga" off;
@@ -79,14 +72,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 22px 0 33px;
+      padding: 25px 30.39px 0 33px;
     }
     .review1_line2 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px 30.39px 0 33px;
+      padding: 10px 30.39px 0 33px;
     }
+  }
+  .review1_name {
+    color: #252525;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
   }
 
   .review2 {
@@ -95,15 +98,17 @@
     height: 301px;
     margin-left: 37px;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.18);
-    .review2_name {
-      color: #252525;
-      font-feature-settings: "clig" off, "liga" off;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.5px;
-      opacity: 0.3;
+    .review2_line2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 22px 0 33px;
+    }
+    .review2_line1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 30.39px 0 33px;
     }
     .review2_amount {
       color: #000;
@@ -116,17 +121,15 @@
       line-height: normal;
       letter-spacing: 0.5px;
     }
-    .review2_line1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 30.39px 0 33px;
-    }
-    .reivew2_line2 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 22px 0 33px;
+    .review2_name {
+      color: #252525;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      opacity: 0.3;
     }
   }
 

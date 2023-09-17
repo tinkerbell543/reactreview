@@ -89,7 +89,7 @@
     .review1_line2 {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       padding: 0.43571428571429vh 2.675vw 1.67857142857143vh 3.03333333333333vw;
     }
   }
@@ -120,7 +120,7 @@
     .review2_line2 {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       padding: 0.43571428571429vh 2.68333333333333vw 1.67857142857143vh
         2.88333333333333vw;
     }

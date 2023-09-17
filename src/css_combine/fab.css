@@ -2,8 +2,8 @@
   /*fAB*/
   .kakaotalk {
     position: fixed; /* 화면에 고정 */
-    bottom: 44px; /* 아래 여백 */
-    right: 112px; /* 오른쪽 여백 */
+    bottom: 5vh; /* 아래 여백 */
+    right: 5vw; /* 오른쪽 여백 */
     cursor: pointer;
     height: 74px; /* figma는 74. 기본값은 122 해보면 74는 너무 작다*/
 
@@ -17,8 +17,8 @@
 @media (max-width: 680px) {
   .kakaotalk {
     position: fixed; /* 화면에 고정 */
-    bottom: 44px; /* 아래 여백 */
-    right: 112px; /* 오른쪽 여백 */
+    top: 85vh; /* 아래 여백 */
+    left: 74vw; /* 오른쪽 여백 */
     cursor: pointer;
     height: 74px; /* figma는 74. 기본값은 122 해보면 74는 너무 작다*/
 
@@ -26,6 +26,5 @@
     object-fit: cover; /* 이미지가 동그란 테두리 내에 맞게 조정 */
     border-radius: 50%; /* 50%로 설정하여 동그란 테두리 생성 */
     filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.35)); /* 그림자 설정 */
-    display: none;
   }
 }

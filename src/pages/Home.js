@@ -19,15 +19,17 @@ import green_boxImage2 from "../img/Vector (1).png";
 import logo_footer from "../img/logo_02_3 1.png";
 
 function Home() {
+  const [appWidth, setAppWidth] = useState(window.innerWidth);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    // 창 크기가 변경될 때마다 호출되는 함수
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
+  // 창 크기가 변경될 때마다 호출되는 함수
+  function handleResize() {
+    setWindowWidth(window.innerWidth);
+    setAppWidth(document.querySelector(".App").clientWidth);
+  }
 
-    // 이벤트 리스너 등록
+  // 이벤트 리스너 등록
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     // 컴포넌트가 언마운트될 때 이벤트 리스너 해제
@@ -35,13 +37,11 @@ function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []); // 빈 배열을 전달하여 이펙트가 처음 한 번만 실행되도록 함
+  console.log("windowWidth:", windowWidth);
+  console.log("appWidth:", appWidth);
+  // appWidth 상태에 따라 다른 경로 생성
+  const path = appWidth <= 680 ? "/mobileinform" : "/desktopinform";
 
-  useEffect(() => {
-    console.log("창 크기가 변경되었습니다. 현재 창의 너비:", windowWidth);
-  }, [windowWidth]); // windowWidth 상태가 변경될 때만 이펙트 실행
-
-  // 조건에 따라 다른 경로 생성
-  const path = windowWidth <= 680 ? "/mobileinform" : "/desktopinform";
   const imgData = {
     images: [
       "Market1",
@@ -280,8 +280,8 @@ function Home() {
 }
 function AppBar() {
   return (
-    <div className="green-nav">
-      <div className="nav-content">
+    <div style={{ minWidth: "1216px" }} className="green-nav">
+      <div style={{ minWidth: "1216px" }} className="nav-content">
         <img src={logo} alt="로고 이미지" className="logo" />
         <h1 className="nav-text">
           <Link to="desktopinform" className="nav-text">
@@ -306,26 +306,6 @@ function AppBarMobile() {
       </div>
     </div>
   );
-}
-// 요소가 'display: none;'인지 확인하는 함수
-function isElementVisible(element) {
-  return window.getComputedStyle(element).display !== "none";
-}
-
-// 브라우저의 너비 가져오기
-function getBrowserWidth() {
-  const elementsToCheck = document.querySelectorAll(".your-selector"); // 요소의 CSS 선택자로 선택
-  let visibleWidth = window.innerWidth;
-
-  // 'display: none;' 속성을 가진 요소를 제외하고 브라우저의 너비 계산
-  elementsToCheck.forEach((element) => {
-    if (isElementVisible(element)) {
-      const elementRect = element.getBoundingClientRect();
-      visibleWidth -= elementRect.width;
-    }
-  });
-
-  return visibleWidth;
 }
 
 export default Home;
