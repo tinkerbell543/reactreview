@@ -51,12 +51,11 @@
     line-height: 129.3%; /* 25.86px */
     width: hug(141px);
     height: (64px);
-    font-family: Noto Sans KR;
   }
   .custom-button1-text {
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -82,7 +81,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: 129.3%; /* 25.86px */
-    font-family: Noto Sans KR;
   }
 
   .desktop-home-text1 {
@@ -155,10 +153,10 @@
   display: none;
   @media (max-width: 500px) {
     position: absolute; /* 절대적 위치 설정 */
-    width: 100vw;
-    height: 53.21428571428571vh;
-    top: 3%;
-    right: 4%;
+    width: 398px;
+    height: 298px;
+    top: 15%;
+
     object-fit: cover;
     display: block;
   }

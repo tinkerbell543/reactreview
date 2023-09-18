@@ -114,7 +114,7 @@
       color: #000;
       text-align: right;
       font-feature-settings: "clig" off, "liga" off;
-      font-family: Noto Sans KR;
+
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
@@ -201,7 +201,7 @@
     display: flex; /* 내부 내용을 가로로 나열하기 위해 Flex 사용 */
     bottom: 0; /* 아래에 위치하도록 설정 */
     left: 62%; /* 왼쪽에 위치하도록 설정 */
-    font-family: Noto Sans KR;
+
     font-size: 28px;
     font-weight: 900;
     line-height: normal;

@@ -281,7 +281,7 @@ function Home() {
 function AppBar() {
   return (
     <div style={{ minWidth: "1216px" }} className="green-nav">
-      <div style={{ minWidth: "1216px" }} className="nav-content">
+      <div className="nav-content">
         <img src={logo} alt="로고 이미지" className="logo" />
         <h1 className="nav-text">
           <Link to="desktopinform" className="nav-text">

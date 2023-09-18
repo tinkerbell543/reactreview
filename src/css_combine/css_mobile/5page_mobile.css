@@ -62,7 +62,6 @@
     color: rgba(255, 255, 255, 1);
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
 
     font-style: normal;
     font-weight: 700;
@@ -86,7 +85,7 @@
     border-width: 2px;
     color: rgba(255, 255, 255, 1);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -125,7 +124,7 @@
     gap: 1.60714285714286vh;
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 8px;
     font-style: normal;
     font-weight: 400;

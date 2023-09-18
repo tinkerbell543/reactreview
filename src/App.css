@@ -16,7 +16,7 @@
 
 .App {
   /* Noto Sans KR 폰트 사용 */
-  font-family: "Noto Sans KR", Poppins, sans-serif;
+  font-family: "Noto Sans KR", Arial, Helvetica, sans-serif, Poppins;
 
   /* 이하 코드는 그대로 유지 */
   font-feature-settings: "clig" off, "liga" off;

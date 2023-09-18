@@ -45,7 +45,7 @@
 }
 .inform_Text1 {
   color: #fff;
-  font-family: Noto Sans KR;
+
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -58,7 +58,7 @@
 
 .inform_Text2 {
   color: #fff;
-  font-family: Noto Sans KR;
+
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@ input:-webkit-autofill {
   font-weight: 400;
   color: #252525;
   text-align: left;
-  font-family: Noto Sans KR;
+
   box-sizing: border-box;
 }
 

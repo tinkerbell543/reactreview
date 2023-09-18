@@ -57,7 +57,7 @@
   .custom-button1-text {
     color: var(--grayscale000, #fff);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -85,7 +85,7 @@
     justify-content: center;
 
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -98,7 +98,7 @@
     color: #fff;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
@@ -112,7 +112,7 @@
   .lowest-price-text {
     color: var(--yellowgreen020, #e4ffcf);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
@@ -125,7 +125,7 @@
     color: var(--grayscale000, #fff);
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

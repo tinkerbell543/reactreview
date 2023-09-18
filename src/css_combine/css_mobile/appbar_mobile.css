@@ -31,7 +31,7 @@
     color: #000;
     text-align: right;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -43,7 +43,7 @@
 .custom-button1-text {
   color: var(--grayscale000, #fff);
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Noto Sans KR;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 700;

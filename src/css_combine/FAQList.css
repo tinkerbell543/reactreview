@@ -21,7 +21,7 @@
     cursor: pointer; /* 추가: 커서 모양 변경 */
     color: #252525;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -37,7 +37,7 @@
   .answer {
     color: #252525;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -49,7 +49,7 @@
     color: #21d67f;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Noto Sans KR;
+
     font-size: 24px;
     font-style: normal;
     font-weight: 900;
