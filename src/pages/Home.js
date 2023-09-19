@@ -72,7 +72,7 @@ function Home() {
 
   //카카오톡상담연결 함수
   const openKakaoTalkChat = () => {
-    const url = "http://pf.kakao.com/_hSClG/chat";
+    const url = "http://pf.kakao.com/_PTxouG/chat";
     const width = 400; // 원하는 폭
     const height = 600; // 원하는 높이
     window.open(url, "KakaoChatPopup", `width=${width},height=${height}`);
