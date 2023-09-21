@@ -16,7 +16,9 @@
 
 .App {
   /* Noto Sans KR 폰트 사용 */
-  font-family: "Noto Sans KR", Arial, Helvetica, sans-serif, Poppins;
+  font-family: "Noto Sans KR", Arial, Helvetica, sans-serif, Poppins,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
 
   /* 이하 코드는 그대로 유지 */
   font-feature-settings: "clig" off, "liga" off;
